@@ -3,10 +3,10 @@
 No-std parser for **all** RFC STUN messages.
 
 ## Highlights
-  - **All** RFCs supported.
-  - Support for each RFC can be enabled/disabled using feature flags.
-  - No-std.
-  - 100% code coverage.
+ - **All** RFCs supported.
+ - Support for each RFC can be enabled/disabled using feature flags.
+ - No-std.
+ - 100% code coverage.
 
 ## Examples
 
