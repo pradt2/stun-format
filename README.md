@@ -1,5 +1,10 @@
 # stun-format
 
+![Github](https://img.shields.io/badge/github-pradt2/stun_format-8da0cb?style=flat-square&labelColor=555555&logo=github")
+![Crates.io](https://img.shields.io/crates/v/stun-format.svg?style=flat-square&color=fc8d62&logo=rust)
+![Codacy grade](https://img.shields.io/codacy/grade/21362268c801439ca5adfbf76911c896?style=flat-square)
+![Crates.io](https://img.shields.io/crates/l/stun-format?style=flat-square)
+
 No-std parser for **all** RFC STUN messages.
 
 ## Highlights
