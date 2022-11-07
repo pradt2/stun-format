@@ -1,13 +1,13 @@
 [package]
 name = "stun-format"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["pradt2"]
 edition = "2021"
 readme = "README.md"
 repository = "https://github.com/pradt2/stun-format"
 license = "MIT"
 
-description = "No-std STUN parser for ALL RFCs"
+description = "No-std parser for all RFCs STUN messages"
 keywords = ["stun", "stun-parser", "zero-copy", "io"]
 categories = ["no-std", "network-programming", "data-structures"]
 
@@ -31,5 +31,5 @@ fmt     = []
 default = ["iana"]
 
 [dependencies]
-r-ex = { version = "1.0.0", features = ["carve", "endian", "splice", "from-ref", "from-arr"] }
-stun-bytes = { version = "1.0.0" }
+r-ex = { version = "1.0.1", features = ["carve", "endian", "splice", "from-ref", "from-arr"] }
+stun-bytes = { version = "1.0.1" }
