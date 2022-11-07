@@ -2,9 +2,15 @@
 
 No-std parser for **all** RFC STUN messages.
 
+## Highlights
+  - **All** RFCs supported.
+  - Support for each RFC can be enabled/disabled using feature flags.
+  - No-std.
+  - 100% code coverage.
+
 ## Examples
 
-### Read message
+### Read STUN message
 
 ```rust
 const MSG: [u8; 28] = [
@@ -27,7 +33,7 @@ let transaction_id = msg.tid()?;        // 0x01
 let attr = msg.attrs_iter().next()?;    // Attr::ChangeRequest { change_ip: true, change_port: true }
 ```
 
-### Create message
+### Create STUN message
 
 ```rust
 const MSG: [u8; 28] = [
@@ -51,20 +57,6 @@ msg.add_attr(Attr::ChangeRequest { change_ip: true, change_port: true })?;
 
 assert_eq!(&MSG, msg.as_bytes());
 ```
-
-## Principles
-
- - **All** RFCs supported.
-
-
- - Support for each RFC can be enabled/disabled using feature flags.
-
-
- - No-std.
-
-
- - 100% code coverage.
-
 
 ## Contribution guidelines
 
