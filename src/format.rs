@@ -1152,8 +1152,8 @@ impl<'a> Attr<'a> {
     }
 
     fn read_change_request(buf: &[u8]) -> Option<(bool, bool)> {
-        let change_ip = buf.get(3).map(|b| b & 0x40 != 0)?;
-        let change_port = buf.get(3).map(|b| b & 0x20 != 0)?;
+        let change_ip = buf.get(3).map(|b| b & 0b100 != 0)?;
+        let change_port = buf.get(3).map(|b| b & 0b10 != 0)?;
         Some((change_ip, change_port))
     }
 
@@ -1726,8 +1726,8 @@ impl<'a> Attr<'a> {
     }
 
     fn write_change_request(change_ip: bool, change_port: bool, buf: &mut [u8]) -> Option<usize> {
-        let change_ip = if change_ip { 0x40 } else { 0x00 } as u8;
-        let change_port = if change_port { 0x20 } else { 0x00 } as u8;
+        let change_ip = if change_ip { 0b100 } else { 0x00 } as u8;
+        let change_port = if change_port { 0b10 } else { 0x00 } as u8;
 
         buf.get_mut(3).map(|b| *b = change_ip | change_port);
         Some(4)
